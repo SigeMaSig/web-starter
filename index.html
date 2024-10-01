@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* มีไว้ให้ dev อ่าน */
+        /* 1.แต่งใคร(id,class,dom) 2.แต่งอะไร  */
+        @font-face {
+            font-family: 'kanit';
+            src: url('./Kanit/Kanit-Regular.ttf');
+        }
+        body{
+            font-family: 'kanit';
+        }
+      #register{
+        font-size: 24px;
+        color: blue;
+        font-weight: 800;
+        padding: 10px;
+        margin: 10px;
+        background-color: yellow;
+        padding-left: 20px;
+        border: 1px blue solid;
+      }
+      .header-form{
+        font-weight: 800;
+      }
+      .form{
+        display: block;
+      }
+      .gender{
+        display:flex;
+        
+      }
+      .container{
+        display: flex;
+      }
+      .item-left{
+        background-color: aqua;
+        flex: 1;
+    }
+      .item-right{
+        background-color: red;
+        flex: 1;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .item1,.item3{
+        background-color: red;
+    }
+    .block{
+        display: block;
+    }
+    /* block , inline , inline-block , flex , grid */
+    </style>
+</head>
+<body>
+    <div class="block">block</div>
+    <div class="container">
+        <div class="item-left">Left</div>
+        <div class="item-right">Right</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item item1">item1</div>
+        <div class="grid-item item2">item2</div>
+        <div class="grid-item item3">item3</div>
+        <div class="grid-item item4">item4</div>
+    </div>
+    <div id="register">Register Form</div>
+    <span class="header-form">ชื่อจริง</span> 
+    <input class="form" type="text">
+    <span class="header-form">นามสกุล</span> 
+    <input class="form" type="text"><br>
+    อายุ <input type="number" min="0" max="100">
+    <div class="gender">
+        เพศ
+            <div>
+                <input name="gender" type="radio"> ชาย
+            </div>
+            <div>
+                <input name="gender" type="radio"> หญิง
+            </div>
+            <div>
+                <input name="gender" type="radio"> อื่นๆ
+            </div>
+    </div>
+    <div>สิ่งที่สนใจ
+        <div>
+            <input name="interest" type="checkbox"> เกม
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> กีฬา
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> หนังสือ
+        </div>
+    </div>
+    <div>
+        คำอธิบายเพิ่มเติม
+        <div><textarea name="comment" cols="30" rows="10"></textarea></div>
+    </div>
+    <button>Submit</button>
+</body>
+</html>

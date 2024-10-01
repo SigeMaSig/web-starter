@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header form-input">
+        Register Form
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">ชื่อจริง</div> 
+            <input class="form" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">นามสกุล</div> 
+            <input class="form" type="text"><br>
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">อายุ</div> 
+            <input class="form" type="number" min="0" max="100">
+        </div>
+            <div class="flex gender form-input">
+            <div class="header-form">เพศ</div>
+                <div class="flex">
+                <div><input name="gender" type="radio"> ชาย</div>
+                <div><input name="gender" type="radio"> หญิง</div>
+                <div><input name="gender" type="radio"> อื่นๆ</div>
+                </div>
+            </div>
+    <div class="form-input">สิ่งที่สนใจ
+        <div>
+            <input name="interest" type="checkbox"> เกม
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> กีฬา
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> หนังสือ
+        </div>
+    </div>
+    <div class="form-input">
+        <div class="header-form">คำอธิบายเพิ่มเติม</div>
+        <div><textarea name="comment" cols="30" rows="10"></textarea></div>
+    </div>
+        <div class="center">
+            <button class="button">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
