@@ -42,6 +42,18 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
+        .cardproject .imgageLinecolor {
+            visibility: hidden;          
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            left: 100%;
+            bottom:-90px ;
+          }
+          
+          .cardproject:hover .imgageLinecolor {
+            visibility: visible;
+          }
     </style>
 </head>
 <body>
@@ -55,6 +67,15 @@
         <div class="card">
             <h2>Project2</h2>
             <a href="MyProject/Project2/index.html">View Project</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Home Work</h1>
+        <div class="card cardproject">
+            <span class="imgageLinecolor"><img width="500" height="400" src="https://media.discordapp.net/attachments/994983764725858444/1280854770181079070/part1-finished-look.png?ex=66fdd9b6&is=66fc8836&hm=cc90e92a0a43a40aca153280b37dbe408de3f5859f3f4fa272e90ad68f09841c&=&format=webp&quality=lossless&width=1123&height=662" alt=""></span>
+            <h2>Flex</h2>
+            <a href="MyProject\HomeWork By jara\LineColor.html">Click to Preview</a>
         </div>
     </div>
 </body>
