@@ -16,9 +16,16 @@
     flex-grow: 1;
   }
 .row2-item1{
-    flex-grow: 1;
-    margin-left: 95%;
-    width: 100%;
+    width: 5%;
+    margin-left: auto;
+}
+.row3-item1{
+    width: 5%;
+    margin-right: auto;
+}
+.row3-item2{
+    width: 5%;
+    margin-left: auto;
 }
 .red{
     background-color: red;
