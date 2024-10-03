@@ -27,6 +27,42 @@
     width: 5%;
     margin-left: auto;
 }
+.row4-item1{
+    flex-grow: 20;
+}
+.row4-item2{
+    flex-grow: 1;
+}
+.row5-item1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20px;
+}
+.row6-item1{
+    margin-right: auto;
+    flex-grow: 10;
+}
+.row6-item2{
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+}
+.row6-item3{
+    margin-left: auto;
+    flex-grow: 10;
+}
+.row7-item1{
+    margin-right: auto;
+    width: 20px;
+}
+.row7-item2{
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+    
+}
 .red{
     background-color: red;
 }
