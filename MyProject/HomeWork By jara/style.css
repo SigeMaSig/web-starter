@@ -53,15 +53,8 @@
     margin-left: auto;
     flex-grow: 10;
 }
-.row7-item1{
-    margin-right: auto;
-    width: 20px;
-}
-.row7-item2{
-    margin-left: auto;
-    margin-right: auto;
-    flex-grow: 1;
-    
+.row7 div{
+    flex-direction: column;
 }
 .red{
     background-color: red;
