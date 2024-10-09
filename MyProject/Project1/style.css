@@ -1,0 +1,56 @@
+body {
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.container{
+    max-width: 768px;
+    max-height: 1024px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #e5f2ac;
+    border-radius: 10px;
+}
+.header{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+.flex{
+    display: flex;
+    margin-bottom: 10px;
+}
+.header-form{
+    width: 100px;
+}
+.container > div{
+    margin-bottom: 10px;
+}
+.col{
+    flex-direction: column;
+}
+input,textarea{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+}
+textarea{
+    margin-top: 5px;
+}
+.button{
+    text-align: center;
+    margin-top: 10px;
+}
+@media screen and (max-width: 425px){
+    .blood-group>div{
+        display: flex;
+    }
+    .blood-rh{
+        background-color: aqua;
+        flex-direction: column;
+    }
+}

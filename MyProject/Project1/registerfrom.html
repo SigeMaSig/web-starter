@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterForm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <form>
+        <div class="header">Register</div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">ชื่อ</div>
+            <input type="text" required>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">นามสกุล</div>
+            <input type="text" required>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">เพศ</div>
+            <div><input type="radio" name="gender" required>ชาย</div>
+            <div><input type="radio" name="gender" required>หญิง</div>
+            <div><input type="radio" name="gender" required>อื่นๆ</div>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">อายุ</div>
+            <input type="number" min="0" max="100" required></input>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">วันเดือนปีเกิด</div>
+            <div><input type="date" name="" id="" required></div>
+        </div>
+        <div class="blood-group form-spacebottom">
+            <div class="normal-blood">
+                <div>กรุ๊ปเลือด</div>
+                <div><input type="radio" name="blood" id="" required>A</div>
+                <div><input type="radio" name="blood" id="" required>B</div>
+                <div><input type="radio" name="blood" id="" required>AB</div>
+                <div><input type="radio" name="blood" id="" required>O</div>
+            </div>
+            <div class="blood-rh">
+                <div>หมวดหมู่พิเศษ RH</div>
+                <div><input type="radio" name="blood" id="" required>Positive +</div>
+                <div><input type="radio" name="blood" id="" required>Negative -</div>
+            </div>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">อีเมล</div>
+            <input type="text" required>
+        </div>
+        <div class="flex form-spacebottom">
+            <div class="header-form">เบอร์โทรศัพท์</div>
+            <input type="text" required>
+        </div>
+        <div class="flex form-spacebottom col">
+            <div class="header-form">ที่อยู่(ปัจจุบัน)</div>
+            <textarea rows="auto" cols="auto" required></textarea>
+        </div>
+        <div class="button">
+        <input type="submit">
+        <input type="submit" value="หน้าแรก" onclick="location.href='../../index.html'">
+        </div>
+    </form>
+   </div>
+</body>
+</html>
