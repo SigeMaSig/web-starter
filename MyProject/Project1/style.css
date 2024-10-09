@@ -2,23 +2,24 @@ body {
     font-family: "Sriracha", cursive;
     font-weight: 400;
     font-style: normal;
+    zoom: 100%;
+    color: #edc4c4;
+
   }
   
 .container{
     max-width: 768px;
-    max-height: 1024px;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    border: 1px solid black;
-    background-color: #e5f2ac;
+    background: rgba(99, 78, 78, 0.5);
     border-radius: 10px;
 }
 .header{
     font-size: 30px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 1000;
 }
 .flex{
     display: flex;
@@ -26,9 +27,6 @@ body {
 }
 .header-form{
     width: 100px;
-}
-.container > div{
-    margin-bottom: 10px;
 }
 .col{
     flex-direction: column;
@@ -40,17 +38,39 @@ input,textarea{
 }
 textarea{
     margin-top: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .button{
     text-align: center;
     margin-top: 10px;
 }
+.myVideo {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+  }
 @media screen and (max-width: 425px){
     .blood-group>div{
         display: flex;
     }
     .blood-rh{
-        background-color: aqua;
         flex-direction: column;
+    }
+    .header-form{
+        width: 100px;
+    }
+    input{
+        width: auto;
+    }
+    textarea{
+        width:auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
