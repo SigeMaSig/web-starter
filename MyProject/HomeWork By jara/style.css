@@ -52,10 +52,7 @@
 .row6-item3{
     margin-left: auto;
     flex-grow: 10;
-}
-.row7 div{
-    flex-direction: column;
-}
+}    
 .red{
     background-color: red;
 }
