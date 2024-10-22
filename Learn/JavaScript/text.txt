@@ -1,0 +1,45 @@
+JavaScript - Introduction and Basics programming
+- แนะนำ JavaScript คืออะไร ทำไมถึงต้องรู้ JavaScript
+- tag <script> สำหรับใช้งาน JavaScript
+    - การวางไว้ใน Head = script run ก่อนโดยไม่สนใจว่าหน้าจอแสดง DOM 
+    - การวางใน body = script run หลังจาก DOM ออกมาครบแล้ว
+- แนะนำการ Import JavaScript file เข้ามาจากภายนอก (เหมือน import css) 
+- แนะนำ inspect element ใน console ของ JavaScript
+- เริ่มต้นด้วย Basic programming กันก่อน
+    - ใครมี Basic programming และเข้าในเนื้อหาอยู่แล้วข้ามได้เลย
+    - เราจะไม่มีการเล่นอะไรบน HTML ใน Session นี้
+    - ใช้คำสั่ง prompt สำหรับ input
+    - variable (let, const, var - แบบเก่า)
+        - string , integer (ทั้งจำนวนเต็มและทศนิยม) , boolean , array , object
+    - Operator (+ , - , * , / , %)
+    - Conditional statement (if , else , switch)
+        - == , != , > , < , >= , <= คืออะไร
+        - && , || , ! คืออะไร
+    - Loop (for , while)
+    - array
+        - array คืออะไร
+        - index ของ array คืออะไร ? (console.log ดูตัวอย่าง)
+        - push (ต่อ array), pop (เอาของออก)
+        - include (บอกว่ามีของไหม) , sort (เรียงของ)
+        - for และ forEach
+    - object
+        - object คืออะไร
+        - index ของ object คืออะไร ?
+        - console.log ดูตัวอย่าง ลองวนลูปแล้วแสดงผลตาม key
+        - push , pop
+        - for และ forEach , map (เพิ่มคะแนน 2 เท่า), filter (เอา)
+    - function
+        - ชุดคำสั่งที่รวมเอาไว้ด้วยกัน
+        - parameter คืออะไร
+        - ยกตัวอย่าง function ตัดเกรด ที่ใส่ตัวเลขแล้วคืนเกรดออกมา
+    - parameter function
+        - array: forEach,map (เพิ่มตัวเลข 2 เท่า) , filter (เอา)
+        - object: find (หาชิ้นนั้นแล้วดึงออกมา), map (คำนวน เกรดออกมา)
+    - standard library อื่น ๆ - function ที่ JavaScript มีอยู่แล้ว
+        - Math หาค่า min , max, floor , ceil , round , random
+        - ตัวอย่าง เล่นเกม โดยเราจะใส่เลขแล้ว ทอยลูกเต๋า
+        - ถ้าทายถูกพ่นออกมาว่า ถูกต้องแล้ว ถ้าไม่ถูกต้อง ก็แสดงมาว่า บอททอย
+
+- แนะนำ
+    - https://www.w3schools.com/js/default.asp
+    - codeacademy
