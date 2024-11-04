@@ -28,7 +28,7 @@ JavaScript - Introduction and Basics programming
         - console.log ดูตัวอย่าง ลองวนลูปแล้วแสดงผลตาม key
         - push , pop
         - for และ forEach , map (เพิ่มคะแนน 2 เท่า), filter (เอา)
-    - function
+    - function 
         - ชุดคำสั่งที่รวมเอาไว้ด้วยกัน
         - parameter คืออะไร
         - ยกตัวอย่าง function ตัดเกรด ที่ใส่ตัวเลขแล้วคืนเกรดออกมา
