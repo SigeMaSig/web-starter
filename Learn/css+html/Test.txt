@@ -7,7 +7,7 @@ outline
     -html content (h1-6,p,table,list,image,video,br)
     -html semantic
     -html form (input text-number,check box,radio,textarea,button)
-- example register form 
+- example register form
 
 css Basic
 -css Text Styling (Font-size,font-family)
