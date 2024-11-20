@@ -267,43 +267,44 @@ Array
 // Map , fillter
 
 
-let studens = [{
-    age:30,
-    name:'kie',
-    score: 50,
-    grade: 'A'
-},{
-    age:40,
-    name:'jane',
-    score: 80,
-    grade: 'C'
-},{
-    age:50,
-    name:'peter',
-    score: 60,
-    grade: 'B'
-}
-]
+// let studens = [{
+//     age:30,
+//     name:'kie',
+//     score: 50,
+//     grade: 'A'
+// },{
+//     age:40,
+//     name:'jane',
+//     score: 80,
+//     grade: 'C'
+// },{
+//     age:50,
+//     name:'peter',
+//     score: 60,
+//     grade: 'B'
+// }
+// ]
 
-let student = studens.find((s)=> {
-    if (s.name == 'peter') {
-        return true
-    }
-})
+// let student = studens.find((s)=> {
+//     if (s.name == 'peter') {
+//         return true
+//     }
+// })
 
 // let doublescore_student = studens.map((s)=> {
 //     s.score = s.score*2
 //     return s
 // })
 
-let heightScore_student = studens.filter((s)=> {
-    if (s.score >= 60) {
-        return true
-    }
-})
+// let heightScore_student = studens.filter((s)=> {
+//     if (s.score >= 60) {
+//         return true
+//     }
+// })
 
-console.log('student',student)
+// console.log('student',student)
 
 // console.log('doublescore_student',doublescore_student)
 
-console.log('heightScore_student',heightScore_student)
+// console.log('heightScore_student',heightScore_student)
+

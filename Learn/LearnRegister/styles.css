@@ -39,6 +39,7 @@
         height: 40px;
         width: 50%;
         background-color: rgb(27, 129, 255);
+        border-radius: 5px;
         color: wheat;
       }
       @media screen and (max-width: 768px){
