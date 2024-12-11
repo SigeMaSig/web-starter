@@ -4,9 +4,9 @@ function submitData(){
     let ageDom = document.querySelector('input[name=age]')
 
     let genderDom = document.querySelector('input[name=gender]:checked')
-    let interestDoms = document.querySelectorAll('input[name=interest]:checked')
+    let interestDoms = document.querySelectorAll('input[name=interest]:checked ')
     
-    let discriptionDom = document.querySelector('textarea[name=discription]')
+    let discriptionDom = document.querySelector('textarea[name=description]')
 
     let interest = ''
     
@@ -25,5 +25,5 @@ function submitData(){
         discription:discriptionDom.value,
         interest: interest
     }
-    console.log(userData)
+    //console.log(userData)
 }
