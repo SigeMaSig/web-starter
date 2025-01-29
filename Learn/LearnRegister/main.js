@@ -25,5 +25,5 @@ function submitData(){
         discription:discriptionDom.value,
         interest: interest
     }
-    //console.log(userData)
+    console.log(userData)
 }

@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyparser = require('body-parser')
+const mysql = require('mysql2/promise')
 const app = express()
 
 app.use(bodyparser.json()) // ส่งเป็น Text ออกมา
@@ -7,44 +8,41 @@ app.use(bodyparser.json()) // ส่งเป็น Text ออกมา
 const port = 8000
 
 // เก็บ User
-let users = []
-let counter = 1
+let conn = null
 
-/* 
-GET /users สำหรับ get users ทั้งหมดที่บันทึกเข้าไปออกมา
-POST /users สำหรับการสร้าง users ใหม่บันทึกเข้าไป
-GET /users/:id สำหรับการดึง users รายคนออกมา
-PUT /users/:id สำหรับการแก้ไข users รายคน (ตาม id ที่บันทึกเข้าไป)
-DELETE /users/:id สำหรับการลบ users รายคน (ตาม id ที่บันทึกเข้าไป)
-*/
-
-
+const initMySQL = async () =>{
+  conn = await mysql.createConnection({
+    host: 'localhost',
+    user : 'root',
+    password : 'root',
+    database : 'tutorials',
+    port:3306
+  })
+}
 
 // path = GET /users สำหรับ get users ทั้งหมดที่บันทึกเข้าไปออกมา
-app.get('/users',(req,res)=>{
-  const fillterUser = users.map(user => {
-    return {
-      id:user.id,
-      firstname : user.firstname,
-      lastname : user.lastname,
-      fullname : user.firstname + " " + user.lastname
-    }
-  })
-  res.json(fillterUser)
+app.get('/users', async(req,res)=>{
+  const results = await conn.query('SELECT * FROM user')
+        res.json(results[0])
 })
 
 //path = POST/user req(requrie) = ตัวแปรส่งผ่าน Client , res(Respon) = ส่งกลับมาหา Client
 //สำหรับการสร้าง users ใหม่บันทึกเข้าไป
-app.post('/user',(req,res)=>{
-  let user = req.body
-  user.id = counter
-  counter += 1
-
-  users.push(user)
-  res.json({
-    massage: 'add ok',
-    user: user
-  })
+app.post('/user',async(req,res)=>{
+  
+  try{let user = req.body
+    const results = await conn.query('INSERT INTO user SET ?' , user)
+   
+    console.log("results",results)
+    res.json({
+      message : 'insert ok',
+      data : results[0]
+    })}catch (error){
+      console.log(error.message)
+      res.status(500).json({
+        message : 'Someing wrong'
+      })
+    }
 })
 
 //GET /users/:id สำหรับการดึง users รายคนออกมา
@@ -95,7 +93,8 @@ app.delete('/users/:id',(req,res)=>{
   })
 })
 
-app.listen(port,(req,res)=>{
+app.listen(port,async(req,res)=>{
+  await initMySQL()
   console.log('http server run at '+ port)
 })
 
