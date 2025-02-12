@@ -42,6 +42,23 @@
         border-radius: 5px;
         color: wheat;
       }
+
+      .message{
+        background-color: lightgray;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .message.suscess{
+        background-color: rgb(122, 209, 122);
+        display: block;
+      }
+      .message.danger{
+        background-color: rgb(253, 38, 38);
+        display: block;
+      }
+
+      
       @media screen and (max-width: 768px){
         .flex{
             flex-direction: column;
@@ -53,3 +70,4 @@
             width: 100%;
         }
       }
+      
