@@ -20,6 +20,28 @@ const initMySQL = async () =>{
     port:3306
   })
 }
+const validatedata = (userData) =>{
+  let errors = []
+  if(!userData.firstname){
+      errors.push('กรุณาใส่ชื่อจริง')
+  }
+  if(!userData.lastname){
+      errors.push('กรุณาใส่นามสกุล')
+  }
+  if(!userData.age){
+      errors.push('กรุณาใส่อายุ')
+  }
+  if(!userData.gender){
+      errors.push('กรุณาใส่เพศ')
+  }
+  if(!userData.interest){
+      errors.push('กรุณาใส่สิ่งที่สนใจ')
+  }
+  if(!userData.description){
+      errors.push('กรุณาใส่รายละเอียด')
+  }
+  return errors
+}
 
 // path = GET /users สำหรับ get users ทั้งหมดที่บันทึกเข้าไปออกมา
 app.get('/users', async(req,res)=>{
@@ -31,7 +53,17 @@ app.get('/users', async(req,res)=>{
 //สำหรับการสร้าง users ใหม่บันทึกเข้าไป
 app.post('/user',async(req,res)=>{
   
-  try{let user = req.body
+  try{
+    let user = req.body
+    
+    const errors = validatedata(user)
+    if(errors.length > 0){
+      throw{
+        message : 'กรอกข้อมูลไม่ครบ',
+        errors : errors
+      }
+    }
+
     const results = await conn.query('INSERT INTO user SET ?' , user)
    
     console.log("results",results)
@@ -40,8 +72,12 @@ app.post('/user',async(req,res)=>{
       data : results[0]
     })}
     catch (error){
+      const errorMessage = error.message || 'Someing wrong'
+      const errors = error.errors || []
+      console.error('error message',errors.message)
       res.status(500).json({
-        message : 'Someing wrong'
+        message : errorMessage,
+        errors: errors
       })
     }
 })
@@ -104,10 +140,3 @@ app.listen(port,async(req,res)=>{
   await initMySQL()
   console.log('http server run at '+ port)
 })
-
-
-//GET ดึงข้อมูล
-//POST สร้างข้อมูล
-//PUT อัพเดท
-//PATCH อัพเดทบางฟิว
-//DELETE ลบ
